@@ -22,8 +22,11 @@ const users: Array<IUser> = [
   },
 ];
 
-const getUsers = ({ response }: { response: any }) => {
+export const defaultResponse = ({ response }: { response: any }) => {
+  response.body = "deno server is running...";
+};
+
+export const getUsers = ({ response }: { response: any }) => {
   response.body = users;
 };
 
-export { getUsers };
